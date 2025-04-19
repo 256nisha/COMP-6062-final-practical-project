@@ -35,7 +35,7 @@ createApp({
     },
     methods: {
         getRandomUser() {
-            fetch('http://comp6062.liamstewart.ca/random-user-profile')
+            fetch('https://comp6062.liamstewart.ca/random-user-profile')
             .then(response => {
                 if (response.ok) {
                     return response.json();
@@ -54,7 +54,7 @@ createApp({
             .catch(error => console.error("Encountered error getting the Random User data",error))
         },
         getWeather() {
-            fetch(`http://comp6062.liamstewart.ca/weather-information?city=${this.weather.city}&province=${this.weather.province}&country=${this.weather.country}`)
+            fetch(`https://comp6062.liamstewart.ca/weather-information?city=${this.weather.city}&province=${this.weather.province}&country=${this.weather.country}`)
             .then(response => {
                 if (response.ok) {
                     return response.json();
